@@ -2,8 +2,8 @@ import { createStore } from "redux";
 
 import reducers from "./reducers";
 
-import actions from "./actions";
-import types from "./types";
+import actions from "./song/actions";
+import types from "./song/types";
 // import { APP_EVENTS } from "./index_d";
 
 const store = createStore(reducers);

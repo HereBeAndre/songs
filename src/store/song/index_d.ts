@@ -1,5 +1,5 @@
 import { CombinedState } from "redux";
-import { Song, SongList } from "../data/index_d";
+import { Song, SongList } from "../../data/index_d";
 
 export type AppState = {
   songList: SongList;

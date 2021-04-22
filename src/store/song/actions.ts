@@ -1,4 +1,4 @@
-import { Song, SongList } from "../data/index_d";
+import { Song, SongList } from "../../data/index_d";
 import types from "./types";
 
 const setSongList = (songs: SongList) => ({
