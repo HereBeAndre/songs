@@ -1,8 +1,7 @@
-import { Song, SongList } from "../../data/index_d";
-
-export type Songs = {
-  songList: SongList;
-  selectedSong: Song;
+export type Song = {
+  title: string;
+  artist: string;
+  duration: string;
 };
 
 // export enum APP_EVENTS {
@@ -10,6 +9,6 @@ export type Songs = {
 // }
 
 export type State = {
-  songList: SongList;
+  songList: Song[];
   selectedSong: Song;
 };
