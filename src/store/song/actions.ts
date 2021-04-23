@@ -12,10 +12,7 @@ const setSelectSong = (song: Song): GenericAction<Song> => ({
   payload: song,
 });
 
-// const logout = (): string => ({
-//   type: types.LOGOUT;
-// })
-
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   setSongList,
   setSelectSong,
