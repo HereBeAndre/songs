@@ -1,6 +1,6 @@
 import types from "./types";
 import { GenericAction } from "./actions_d";
-import { Song, SongList } from "../../data/index_d";
+import { Song } from "./index_d";
 import { State } from "./index_d";
 
 const initialDataState: State = {
@@ -18,7 +18,7 @@ const reducers = (
 ): State => {
   switch (action.type) {
     case types.SET_SONG_LIST:
-      return { ...state, songList: action.payload as SongList };
+      return { ...state, songList: action.payload as Song[] };
     case types.SET_SELECT_SONG:
       return { ...state, selectedSong: action.payload as Song };
     default:
