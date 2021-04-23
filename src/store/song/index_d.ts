@@ -1,7 +1,6 @@
-import { CombinedState } from "redux";
 import { Song, SongList } from "../../data/index_d";
 
-export type AppState = {
+export type Songs = {
   songList: SongList;
   selectedSong: Song;
 };
@@ -10,4 +9,7 @@ export type AppState = {
 //   LOGOUT = "LOGOUT",
 // }
 
-export type State = CombinedState<AppState>;
+export type State = {
+  songList: SongList;
+  selectedSong: Song;
+};
