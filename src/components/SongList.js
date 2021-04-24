@@ -1,9 +1,8 @@
 import React from 'react';
-import { connect, useDispatch } from 'react-redux';
+import { connect } from 'react-redux';
 import { setSelectSong } from '../actions';
 
 const SongList = ({ songList, selectedSong }) => {
-  const dispatch = useDispatch();
   const renderList = songList.map((song) => {
     return (
       <div className="item" key={song.title}>
@@ -24,7 +23,11 @@ const SongList = ({ songList, selectedSong }) => {
       </div>
     );
   });
-  return <div className="ui divided list">{renderList}</div>;
+  return (
+    <>
+      <div className="ui divided list">{renderList}</div>
+    </>
+  );
 };
 
 const mapStateToProps = (state) => {
