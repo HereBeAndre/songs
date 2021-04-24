@@ -1,3 +1,4 @@
+import { combineReducers } from "redux";
 import { GenericAction } from "../actions_d/actions_d";
 import { Song, State } from "../index_d/index_d";
 import types from "../types/types";
@@ -11,7 +12,19 @@ const initialDataState: State = {
   },
 };
 
-const reducers = (
+const songsReducer = (
+  state = initialDataState,
+  action: GenericAction<unknown>
+): State => {
+  switch (action.type) {
+    case types.SET_SONG_LIST:
+      return { ...state, songList: action.payload as Song[] };
+    default:
+      return state;
+  }
+};
+
+const selectedSongReducer = (
   state = initialDataState,
   action: GenericAction<unknown>
 ): State => {
@@ -23,4 +36,7 @@ const reducers = (
   }
 };
 
-export default reducers;
+export default combineReducers({
+  songList: songsReducer,
+  selectedSong: selectedSongReducer,
+});

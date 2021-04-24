@@ -1,7 +1,7 @@
-const prefix = "Song";
-const SET_SELECT_SONG = `${prefix}.SET_SELECT_SONG`;
+const SET_SONG_LIST = "SET_SONG_LIST";
+const SET_SELECT_SONG = "SET_SELECT_SONG";
 
 export default {
-  prefix,
+  SET_SONG_LIST,
   SET_SELECT_SONG,
 };
