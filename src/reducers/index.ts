@@ -1,4 +1,6 @@
 import { combineReducers } from 'redux';
+import { GenericAction } from '../actions_d';
+import types from '../types';
 
 const songListReducer = () => {
   return [
@@ -19,7 +21,7 @@ const songListReducer = () => {
     },
     {
       artist: 'George Baker',
-      title: 'Under Pressure',
+      title: 'Little Green Bag',
       duration: '3:15',
     },
     {
@@ -40,9 +42,9 @@ const songListReducer = () => {
   ];
 };
 
-const selectedSongReducer = (song = null, action) => {
+const selectedSongReducer = (song = null, action: GenericAction<unknown>) => {
   switch (action.type) {
-    case 'SET_SELECT_SONG':
+    case types.SET_SELECT_SONG:
       return action.payload;
     default:
       return song;

@@ -1,9 +1,9 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import { setSelectSong } from '../actions';
+import { State } from '../index_d';
 
-const SongList = ({ songList, selectedSong }) => {
-  const renderList = songList.map((song) => {
+const SongList = ({ songList, selectedSong }: any) => {
+  const renderList = songList.map((song: any) => {
     return (
       <div className="item" key={song.title}>
         <div className="right floated content">
@@ -30,7 +30,7 @@ const SongList = ({ songList, selectedSong }) => {
   );
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: State) => {
   return { songList: state.songList };
 };
 
