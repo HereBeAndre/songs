@@ -3,20 +3,19 @@ import { connect } from 'react-redux';
 
 const SongDetail = ({ selectedSong }) => {
   return (
-    <div>
+    <>
       {selectedSong && (
         <div>
-          {selectedSong.title}
-          {selectedSong.artist}
-          {selectedSong.duration}
+          <h4>Title: {selectedSong.title}</h4>
+          <h4>Artist: {selectedSong.artist}</h4>
+          <h4>Duration: {selectedSong.duration}</h4>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     selectedSong: state.selectedSong,
   };

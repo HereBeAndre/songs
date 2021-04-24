@@ -5,17 +5,37 @@ const songListReducer = () => {
     {
       artist: 'Billy Joel',
       title: 'Piano Man',
-      duration: '7:00',
+      duration: '5:39',
     },
     {
       artist: 'The Beatles',
-      title: 'Let It Be',
-      duration: '6:00',
+      title: 'Hey Jude',
+      duration: '8:10',
     },
     {
       artist: 'The Queen & David Bowie',
       title: 'Under Pressure',
-      duration: '5:00',
+      duration: '4:04',
+    },
+    {
+      artist: 'George Baker',
+      title: 'Under Pressure',
+      duration: '3:15',
+    },
+    {
+      artist: 'Simon & Garfunkel',
+      title: 'Mrs. Robinson',
+      duration: '4:04',
+    },
+    {
+      artist: 'Don McLean',
+      title: 'American Pie',
+      duration: '8:36',
+    },
+    {
+      artist: 'Simon & Garfunkel',
+      title: 'The Boxer',
+      duration: '5:09',
     },
   ];
 };
