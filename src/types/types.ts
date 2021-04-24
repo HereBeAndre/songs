@@ -1,7 +1,0 @@
-const SET_SONG_LIST = "SET_SONG_LIST";
-const SET_SELECT_SONG = "SET_SELECT_SONG";
-
-export default {
-  SET_SONG_LIST,
-  SET_SELECT_SONG,
-};
