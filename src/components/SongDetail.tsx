@@ -1,7 +1,11 @@
-import React from 'react';
 import { connect } from 'react-redux';
+import { Song, State } from '../index_d';
 
-const SongDetail = ({ selectedSong }) => {
+interface SelectedSongProps {
+  selectedSong: Song;
+}
+
+const SongDetail = ({ selectedSong }: SelectedSongProps) => {
   return (
     <>
       {selectedSong && (
@@ -15,7 +19,7 @@ const SongDetail = ({ selectedSong }) => {
   );
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: State) => {
   return {
     selectedSong: state.selectedSong,
   };
